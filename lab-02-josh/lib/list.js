@@ -10,6 +10,12 @@ class List {
     this[this.length++] = item;
     return this.length;
   }
+  
+
+  pop() {
+    this[this.length-1];
+    return this.length-1;
+  }
 
 }
 
