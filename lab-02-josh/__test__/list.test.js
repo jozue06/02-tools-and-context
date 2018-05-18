@@ -22,6 +22,17 @@ describe('List Module', () => {
 
     myList.pop();
     expect(myList.length).toBe(1);
+    
+  });
+
+
+  it('pop() returns the item that was popped off', () => {
+
+    myList.pop();
+    expect(myList);
+    
   });
 
 });
+
+
