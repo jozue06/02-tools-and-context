@@ -7,14 +7,24 @@ class List {
   }
 
   push(item) {
-    this[this.length++] = item;
+    this[this.length++] = item;//?
     return this.length;
   }
   
 
   pop() {
-    this[this.length-1];
-    return this[this.length-1];
+    this[this.length--];
+    delete this[this.length];
+    return this;
+  }
+
+  foreach() {
+    let forLoop = function() {
+      for(let i=0; i < this.length ;i++){
+        return undefined;
+      }
+      forLoop();
+    };
   }
 
 }
