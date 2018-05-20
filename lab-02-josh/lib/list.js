@@ -17,15 +17,14 @@ class List {
     delete this[this.length];
     return this;
   }
-
-  foreach() {
-    let forLoop = function() {
-      for(let i=0; i < this.length ;i++){
-        return undefined;
-      }
-      forLoop();
-    };
+  
+  forEach(func) {
+    for(let i=0; i < this.length ;i++){
+      func(this[i]);
+    }
+    return undefined;
   }
+  
 
 }
 

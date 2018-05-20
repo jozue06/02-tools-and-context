@@ -41,25 +41,25 @@ describe('List Module', () => {
   });
 
 
-  it('foreach() returns ', () => {
+  it('forEach() returns undefined', () => {
     let myList = new List();
     myList.push('foopp');
     myList.push('fosss');
-    myList.foreach();
-    console.log(myList);
-    expect(myList.foreach()).toEqual(undefined);
-    
+    expect(myList.forEach(element =>{
+      return element;
+    })).toEqual(undefined);//?
     
   });
 
-  it('foreach() returns ', () => {
+  it('forEach() should apply function to each element', () => {
     let myList = new List();
+    let array2 = new List();
     myList.push('foopp');
     myList.push('fosss');
-    myList.foreach();
-    console.log(myList);
-    expect(myList).toEqual(undefined);
-    
+    myList.forEach(element =>{
+      array2.push(element+3);
+    });
+    expect(array2[1]).toEqual('fosss3');
     
   });
 
