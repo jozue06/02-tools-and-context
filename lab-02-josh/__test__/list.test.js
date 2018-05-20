@@ -2,11 +2,9 @@
 
 let List = require('../lib/list.js');
 
-
 describe('List Module', () => {
   it('push() returns the updated length of the list', () => {
     let myList = new List();
-
     myList.push('FOO');
     expect(myList.length).toBe(1);
       
@@ -14,7 +12,6 @@ describe('List Module', () => {
 
   it('push() adds an element to the end of the list', () => {
     let myList = new List();
-
     myList.push('foo');
     expect(myList[myList.length-1]).toEqual('foo');
   });
@@ -24,8 +21,7 @@ describe('List Module', () => {
     myList.push('foo');
     myList.push('foosasd');
     myList.push('fooddd');
-    myList.pop();
-    console.log(myList);//?   
+    myList.pop(); 
     expect(myList.length).toBe(2);
     
   });
@@ -63,6 +59,29 @@ describe('List Module', () => {
     
   });
 
-});
+  it('map() should apply function to each element in the array, and return adultured new array', () => {
+    let myList = new List();
+    let newArr = new List();
+    myList.push('foopp');
+    myList.push('fosss');
+    myList.map(element =>{
+      newArr.push(element+3);
+    });
+    expect(newArr[1]).toEqual('fosss3');
 
+  });
+
+  it('map() should apply function to each element in the array, and return unadultured old array', () => {
+    let myList = new List();
+    let newArr = new List();
+    myList.push('foopp');
+    myList.push('fosss');
+    myList.map(element =>{
+      newArr.push(element+3);
+    });
+    expect(myList[1]).toEqual('fosss');
+
+  });
+
+});
 
