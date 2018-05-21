@@ -21,7 +21,7 @@ _map_ is an airity of two pure function exported as a method of List. It iterate
 to each element of that array and assembles a new array of the elements of the old array after the function has been applied to each element. _Map_ returns the new array and does not tamper with the integrity of the input array.
 
 * **filter**:
-Have yet to complete.
+_filter_ is an airity of one pure function exported as a method of List. It takes in a function that iterates through an array and applies that function to each element, and returns the elements that pass the function that was passed.
 
 * **reduce**:
 Have yet to complete.

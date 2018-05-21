@@ -43,7 +43,7 @@ describe('List Module', () => {
     myList.push('fosss');
     expect(myList.forEach(element =>{
       return element;
-    })).toEqual(undefined);//?
+    })).toEqual(undefined);
     
   });
 
@@ -83,15 +83,15 @@ describe('List Module', () => {
 
   });
 
-  it('map() should apply function to each element in the array, and return unadultured old array', () => {
-    let animals = new List();
-    animals.push('cat');
-    animals.push('dog');
-    animals.push('horse');
-    let newArr = animals.filter(3);
-    console.log(animals);
-    console.log(newArr);
-    expect(newArr[0]).toBe('cat');
+  it('filter() should apply function to each element in the array, and return a new filtered array ', () => {
+    let myList = new List();
+    myList.push('cat');
+    myList.push('dog');
+    myList.push('horse');
+    let animalsNew = myList.filter(element => {
+      return element.length > 3;
+    });
+    expect(animalsNew[0]).toBe('horse');
   });
 
 });
