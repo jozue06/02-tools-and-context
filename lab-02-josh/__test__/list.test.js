@@ -83,5 +83,15 @@ describe('List Module', () => {
 
   });
 
-});
+  it('map() should apply function to each element in the array, and return unadultured old array', () => {
+    let animals = new List();
+    animals.push('cat');
+    animals.push('dog');
+    animals.push('horse');
+    let newArr = animals.filter(3);
+    console.log(animals);
+    console.log(newArr);
+    expect(newArr[0]).toBe('cat');
+  });
 
+});

@@ -34,6 +34,16 @@ class List {
     return newArr;
   }
 
+  filter(animals){
+   
+    var threeLetterAnimals = [];
+    for (let count = 0; count < animals.length; count++){
+      if (animals[count].length === 3) {
+        threeLetterAnimals.push(animals[count]);
+      }
+    }
+    return threeLetterAnimals;//?
+  }
 }
 
 module.exports = List;
